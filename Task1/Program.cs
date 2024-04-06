@@ -8,6 +8,9 @@ namespace Task1
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services
+                .AddScoped<IService, MonthsService>()
+                .AddScoped<IService, WeekService>();
 
             var app = builder.Build();
 
